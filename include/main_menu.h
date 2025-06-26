@@ -1,6 +1,6 @@
 #pragma once
 
-#include "canvas.h"
+#include <esp32_ui/canvas.h>
 #include "ch_menu.h"
 
 class MainMenu : public Canvas

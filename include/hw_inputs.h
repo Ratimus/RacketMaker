@@ -2,12 +2,12 @@
 #include <memory>
 #include <array>
 
-#include "gateIn.h"
-#include "MagicButton.h"
-#include "Latchable.h"
-#include "ClickEncoder.h"
-#include "pin_map.h"
+#include <core/gateIn.h>
+#include <core/MagicButton.h>
+#include <core/Latchable.h>
+#include <core/ClickEncoder.h>
 #include <esp32_ui/menu_event.h>
+#include "pin_map.h"
 
 extern TaskHandle_t hw_input_task_handle;
 
