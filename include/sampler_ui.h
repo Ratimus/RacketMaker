@@ -4,9 +4,9 @@
 #include <memory>
 
 #include <esp32_ui/ui_manager.h>
-#include <ClickEncoder.h>
-#include <MagicButton.h>
-#include <Latchable.h>
+#include <core/ClickEncoder.h>
+#include <core/MagicButton.h>
+#include <core/Latchable.h>
 
 #include "pin_map.h"
 #include "hw_inputs.h"
