@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Libraries/SequencerTools"
+		}
+	],
+  "settings": {
+    "files.associations": {
+      "algorithm": "cpp",
+      "array": "cpp",
+      "string": "cpp",
+      "string_view": "cpp",
+      "cmath": "cpp"
+    }
+  }
+}
