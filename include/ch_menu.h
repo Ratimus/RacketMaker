@@ -1,10 +1,10 @@
 #pragma once
 
-#include "field.h"
-#include "sampler_voice.h"
+#include <esp32_ui/toggle_element.h>
+#include <esp32_ui/canvas.h>
+#include <esp32_ui/field.h>
 
-#include "canvas.h"
-#include "toggle_element.h"
+#include "sampler_voice.h"
 
 static constexpr const char *channel_labels[] = {
     "Channel A", "Channel B", "Channel C", "Channel D"};

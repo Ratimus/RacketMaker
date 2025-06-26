@@ -7,7 +7,7 @@
 #include "Latchable.h"
 #include "ClickEncoder.h"
 #include "pin_map.h"
-#include "menu_event.h"
+#include <esp32_ui/menu_event.h>
 
 extern TaskHandle_t hw_input_task_handle;
 

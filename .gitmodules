@@ -1,3 +1,0 @@
-[submodule "esp32_ui"]
-	path = esp32_ui
-	url = https://github.com/Ratimus/esp32_ui.git

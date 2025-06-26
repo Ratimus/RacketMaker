@@ -1,7 +1,7 @@
 #pragma once
 
-#include "field.h"
-#include "canvas.h"
+#include <esp32_ui/field.h>
+#include <esp32_ui/canvas.h>
 #include "sampler_voice.h"
 
 class Mixer : public Canvas

@@ -3,11 +3,11 @@
 #include <vector>
 #include <memory>
 
-#include "ui_manager.h"
+#include <esp32_ui/ui_manager.h>
+#include <ClickEncoder.h>
+#include <MagicButton.h>
+#include <Latchable.h>
 
-#include "Latchable.h"
-#include "MagicButton.h"
-#include "ClickEncoder.h"
 #include "pin_map.h"
 #include "hw_inputs.h"
 #include "ch_menu.h"
