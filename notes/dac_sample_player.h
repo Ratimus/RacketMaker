@@ -206,3 +206,30 @@
 
 //   delayMicroseconds(SAMPLE_PERIOD_US * SAMPLE_LENGTH); // 128-sample batch at 44.1kHz sample rate
 // }
+
+/*
+SamplePlayer player(HSPI_HOST, GPIO_NUM_33, GPIO_NUM_32);
+
+void setup()
+{
+    player.begin();
+    player.startPlaybackTimer(44100);
+}
+
+void loop()
+{
+    SampleBatch batch;
+    batch.size = 64;
+    batch.samples[0].resize(batch.size);
+    batch.samples[1].resize(batch.size);
+
+    for (size_t i = 0; i < batch.size; ++i)
+    {
+        batch.samples[0][i] = (i * 64) & 0x0FFF;
+        batch.samples[1][i] = ((128 - i) * 64) & 0x0FFF;
+    }
+
+    player.playSamples(batch);
+    vTaskDelay(pdMS_TO_TICKS(10));
+}
+*/
