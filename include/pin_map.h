@@ -33,8 +33,8 @@ constexpr uint8_t NUM_GATES_IN = 4;
 constexpr uint8_t GATE_IN_PINS[NUM_GATES_IN]{GATEin_0, GATEin_1, GATEin_2, GATEin_3};
 
 // encoder pins
-constexpr uint8_t ENC_A = 5;
-constexpr uint8_t ENC_B = 18;
+constexpr uint8_t ENC_A = 18;
+constexpr uint8_t ENC_B = 5;
 constexpr uint8_t ENC_SW = 19;
 
 constexpr uint8_t BN_1 = 4;

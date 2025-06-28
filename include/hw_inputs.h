@@ -2,10 +2,10 @@
 #include <memory>
 #include <array>
 
-#include <core/gateIn.h>
-#include <core/MagicButton.h>
-#include <core/Latchable.h>
-#include <core/ClickEncoder.h>
+#include <SequencerTools/GateIn.h>
+#include <SequencerTools/MagicButton.h>
+#include <SequencerTools/Latchable.h>
+#include <SequencerTools/ClickEncoder.h>
 #include <esp32_ui/menu_event.h>
 #include "pin_map.h"
 
@@ -42,6 +42,7 @@ public:
     encoder->service();
   }
 
+  // This makes MenuEvents out of encoder states
   MenuEvent read_encoder()
   {
     MenuEvent ev(MenuEvent::Source::Encoder, MenuEvent::Type::NoType, MAIN_ENCODER_INDEX);
@@ -81,7 +82,7 @@ public:
     }
     else if (next == ButtonState::Clicked)
     {
-      ev.type = MenuEvent::Select;
+      ev.type = MenuEvent::Type::Select;
     }
     else if (next == ButtonState::DoubleClicked)
     {
@@ -95,10 +96,31 @@ public:
     return ev;
   }
 
+  // This makes MenuEvents out of button states
   MenuEvent read_button(uint8_t idx)
   {
-    // TODO: this
+    button_states[idx].in = push_buttons[idx].read();
     MenuEvent ev(MenuEvent::Source::PushButton, MenuEvent::Type::NoType, idx);
+    if (button_states[idx].pending())
+    {
+      switch (button_states[idx].clock())
+      {
+      case ButtonState::Clicked:
+        ev.type = MenuEvent::Type::Select;
+        break;
+      case ButtonState::DoubleClicked:
+        ev.type = MenuEvent::Type::Back;
+        break;
+      case ButtonState::Held:
+        ev.type = MenuEvent::Type::ButtonHeld;
+        break;
+      case ButtonState::Released:
+        ev.type = MenuEvent::Type::ButtonReleased;
+        break;
+      default:
+        break;
+      }
+    }
     return ev;
   }
 

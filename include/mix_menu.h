@@ -15,7 +15,7 @@ public:
                                        { return voice[0].mix.in; }));
     level_a->register_setter(std::move([this](uint8_t level)
                                        { voice[0].mix.clock_in(level); }));
-    auto W_level_a = this->add_element(std::move(level_a));
+    auto W_level_a = add_element(std::move(level_a));
     W_level_a->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavLeft, MAIN_ENCODER_INDEX});
     W_level_a->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavRight, MAIN_ENCODER_INDEX});
     W_level_a->set_cursor_offset(0);
@@ -26,7 +26,7 @@ public:
                                        { return voice[1].mix.in; }));
     level_b->register_setter(std::move([this](uint8_t level)
                                        { voice[1].mix.clock_in(level); }));
-    auto W_level_b = this->add_element(std::move(level_b));
+    auto W_level_b = add_element(std::move(level_b));
     W_level_b->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavLeft, MAIN_ENCODER_INDEX});
     W_level_b->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavRight, MAIN_ENCODER_INDEX});
     W_level_b->set_cursor_offset(0);
@@ -37,7 +37,7 @@ public:
                                        { return voice[2].mix.in; }));
     level_c->register_setter(std::move([this](uint8_t level)
                                        { voice[2].mix.clock_in(level); }));
-    auto W_level_c = this->add_element(std::move(level_c));
+    auto W_level_c = add_element(std::move(level_c));
     W_level_c->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavLeft, MAIN_ENCODER_INDEX});
     W_level_c->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavRight, MAIN_ENCODER_INDEX});
     W_level_c->set_cursor_offset(0);
@@ -48,7 +48,7 @@ public:
                                        { return voice[3].mix.in; }));
     level_d->register_setter(std::move([this](uint8_t level)
                                        { voice[3].mix.clock_in(level); }));
-    auto W_level_d = this->add_element(std::move(level_d));
+    auto W_level_d = add_element(std::move(level_d));
     W_level_d->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavLeft, MAIN_ENCODER_INDEX});
     W_level_d->register_event_listener(MenuEvent{MenuEvent::Source::Encoder, MenuEvent::Type::NavRight, MAIN_ENCODER_INDEX});
     W_level_d->set_cursor_offset(0);

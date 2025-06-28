@@ -29,7 +29,7 @@
 
 #include <Arduino.h>
 #include <atomic>
-#include <core/Latchable.h>
+#include <SequencerTools/Latchable.h>
 #include "constants.h"
 
 // Available sample sets:
