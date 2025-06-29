@@ -9,6 +9,8 @@
 #include <esp32_ui/menu_event.h>
 #include "pin_map.h"
 
+using MenuEvent = esp32_ui::MenuEvent;
+
 extern TaskHandle_t hw_input_task_handle;
 
 class HWInputs

@@ -4,6 +4,8 @@
 #include <esp32_ui/canvas.h>
 #include "sampler_voice.h"
 
+namespace esp32_ui
+{
 class Mixer : public Canvas
 {
 public:
@@ -118,3 +120,5 @@ public:
     return Canvas::handle_event(ev);
   }
 };
+
+} // namespace esp32_ui
